@@ -30,7 +30,7 @@ with st.form(key='my_form'):
     
     st.text("通常、自分から話を始めることはない。")
     temp_options = ['はい', 'どちらでもない','いいえ']
-    temp = st.select_slider(options=temp_options)
+    temp = st.select_slider("", options=temp_options)
 
     submit_button = st.form_submit_button(label="次へ")
     

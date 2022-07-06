@@ -34,21 +34,9 @@ with st.form(key='my_form'):
 
     submit_button = st.form_submit_button(label="次へ")
     
-import pandas as pd
-import numpy as np
-import altair as alt
-
 with st.form(key='my_result'):
-    df = pd.DataFrame(
-         np.random.randn(200, 3),
-         columns=['a', 'b', 'c'])
-
-    c = alt.Chart(df).mark_circle().encode(
-         x='a', y='b', size='c', color='c', tooltip=['a', 'b', 'c'])
-
     st.subheader("あなたの ilodoli タイプは建築家です。")
     st.image("https://kuku-keke.com/wp-content/uploads/2021/01/4537_6.png")
     st.text("この上なく孤独、そして最も希少で戦略に長けている性格タイプ。")
-    #st.altair_chart(c, use_container_width=True)
     
     submit_button = st.form_submit_button(label="OK")

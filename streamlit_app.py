@@ -30,7 +30,7 @@ with st.form(key='my_form'):
     
     st.text("通常、自分から話を始めることはない。")
     temp_options = ['はい', 'どちらでもない','いいえ']
-    temp = st.select_slider("Choose a temperature", options=temp_options)
+    temp = st.select_slider(options=temp_options)
 
     submit_button = st.form_submit_button(label="次へ")
     
@@ -48,7 +48,7 @@ with st.form(key='my_result'):
 
     st.subheader("あなたの ilodoli タイプは建築家です。")
     st.image("https://kuku-keke.com/wp-content/uploads/2021/01/4537_6.png")
-    st.text("この上なく孤独、そして最も希少で戦略に長けている性格タイプのひとつで、建築家型の人達自身、これをすべて痛いほど感じています。")
-    st.altair_chart(c, use_container_width=True)
+    st.text("この上なく孤独、そして最も希少で戦略に長けている性格タイプ。")
+    #st.altair_chart(c, use_container_width=True)
     
     submit_button = st.form_submit_button(label="OK")

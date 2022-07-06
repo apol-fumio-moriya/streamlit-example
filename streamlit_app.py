@@ -28,10 +28,8 @@ with st.form(key='my_form'):
         horizontal=True,
         )
     
-    st.subheader("通常、自分から話を始めることはない。")
+    st.text("通常、自分から話を始めることはない。")
     temp_options = ['はい', 'どちらでもない','いいえ']
-    temp = st.select_slider("選択してください", options=temp_options)
-    st.write("あなたが選択したものは、こちらです：", temp)
 
     submit_button = st.form_submit_button(label="次へ")
     
@@ -39,11 +37,13 @@ import pandas as pd
 import numpy as np
 import altair as alt
 
-df = pd.DataFrame(
-     np.random.randn(200, 3),
-     columns=['a', 'b', 'c'])
+with st.form(key='my_result'):
+    df = pd.DataFrame(
+         np.random.randn(200, 3),
+         columns=['a', 'b', 'c'])
 
-c = alt.Chart(df).mark_circle().encode(
-     x='a', y='b', size='c', color='c', tooltip=['a', 'b', 'c'])
+    c = alt.Chart(df).mark_circle().encode(
+         x='a', y='b', size='c', color='c', tooltip=['a', 'b', 'c'])
 
-st.altair_chart(c, use_container_width=True)
+    st.text("あなたの ilodoli タイプは○○です")
+    st.altair_chart(c, use_container_width=True)

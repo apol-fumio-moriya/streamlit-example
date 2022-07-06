@@ -30,6 +30,7 @@ with st.form(key='my_form'):
     
     st.text("通常、自分から話を始めることはない。")
     temp_options = ['はい', 'どちらでもない','いいえ']
+    temp = st.select_slider("Choose a temperature", options=temp_options)
 
     submit_button = st.form_submit_button(label="次へ")
     
@@ -47,3 +48,5 @@ with st.form(key='my_result'):
 
     st.text("あなたの ilodoli タイプは○○です")
     st.altair_chart(c, use_container_width=True)
+    
+    submit_button = st.form_submit_button(label="OK")

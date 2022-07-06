@@ -47,7 +47,9 @@ with st.form(key='my_result'):
          x='a', y='b', size='c', color='c', tooltip=['a', 'b', 'c'])
 
     st.subheader("あなたの ilodoli タイプは建築家です。")
-    st.text("この上なく孤独、そして最も希少で戦略に長けている性格タイプのひとつで、建築家型の人達自身、これをすべて痛いほど感じています。全人口のわずか2％を占めていて、特に女性が珍しく、全人口のたった0.8％です。自分と同じ考えを持ち、その飽くなき知的追求心や、まるでチェス試合のような駆け引きについていける人を見つけるのに苦労することが多いのです。想像力が豊かな一方で決断力があり、野心に溢れている反面、引っ込み思案で、驚くほど好奇心がありますが、エネルギーを浪費しません。")
+    with col1:
+        st.image("https://kuku-keke.com/wp-content/uploads/2021/01/4537_6.png")
+    st.text("この上なく孤独、そして最も希少で戦略に長けている性格タイプのひとつで、建築家型の人達自身、これをすべて痛いほど感じています。")
     st.altair_chart(c, use_container_width=True)
     
     submit_button = st.form_submit_button(label="OK")

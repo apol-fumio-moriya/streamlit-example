@@ -35,10 +35,10 @@ def page1():
 
     st.text("自分の考えに夢中になって、周囲のことを無視したり忘れることがよくある。")
     #option = st_btn_select(('はい', 'いいえ'), index=0)
-    option = st_btn_select('はい', 'いいえ')
-    if option == 'はい':
+    option = st_btn_select('YES', 'NO')
+    if option == 'YES':
         st.session_state["page-select"] = "page2"
-    elif option == 'いいえ':
+    elif option == 'NO':
         st.session_state["page-select"] = "page3"
         
 def page2():
@@ -51,10 +51,10 @@ def page2():
     )
 
     st.text("受信箱がごちゃごちゃするのが我慢できず、できるだけ早くEメールに返答しようとする。")
-    option = st_btn_select('はい', 'いいえ')
-    if option == 'はい':
+    option = st_btn_select('YES', 'NO')
+    if option == 'YES':
         st.session_state["page-select"] = "page4"
-    elif option == 'いいえ':
+    elif option == 'NO':
         st.session_state["page-select"] = "page1"
                                               
 def page3():
@@ -67,10 +67,10 @@ def page3():
     )
 
     st.text("プレッシャーがあるときでも常にリラックスし、集中できる。")
-    option = st_btn_select('はい', 'いいえ')
-    if option == 'はい':
+    option = st_btn_select('YES', 'NO')
+    if option == 'YES':
         st.session_state["page-select"] = "page4"
-    elif option == 'いいえ':
+    elif option == 'NO':
         st.session_state["page-select"] = "page1"
                                               
 def page4():

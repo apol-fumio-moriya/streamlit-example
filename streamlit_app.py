@@ -89,25 +89,6 @@ def page3():
                                               
 def page4():
     def change_page():
-        st.session_state["page-select"] = "page5"
-
-    set_bg_hack_url()
-    st.write(
-        """
-    # ilodoli タイプ診断
-    ilodoli にてあなたのタイプを診断してみませんか。
-    """
-    )
-
-    with st.form(key='my_form'):
-        st.text("通常、自分から話を始めることはない。")
-        temp_options = ['はい', 'どちらでもない','いいえ']
-        temp = st.select_slider("", options=temp_options)
-
-        submit_button = st.form_submit_button(label="診断", on_click=change_page)
-                                              
-def page5():
-    def change_page():
         st.session_state["page-select"] = "page1"
 
     with st.form(key='my_result'):
@@ -119,13 +100,15 @@ def page5():
 
 
 pages = dict(
-    page1="タイプ診断",
-    page2="診断結果",
+    page1="タイプ診断 1",
+    page2="タイプ診断 2",
+    page3="タイプ診断 3",
+    page4="診断結果",
 )
 
 page_id = st.sidebar.selectbox(
     "ページ名",
-    ["page1", "page2"],
+    ["page1", "page2", "page3", "page4"],
     format_func=lambda page_id: pages[page_id],
     key="page-select",
 )
@@ -135,3 +118,10 @@ if page_id == "page1":
 
 if page_id == "page2":
     page2()
+    
+if page_id == "page3":
+    page3()
+
+if page_id == "page4":
+    page4()
+

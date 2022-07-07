@@ -1,5 +1,4 @@
+st-btn-select
 altair
 pandas
 streamlit
-'/home/appuser/venv/bin/python -m pip install --upgrade pip'
-pip install git+https://github.com/0phoff/st-btn-select.git

@@ -99,9 +99,9 @@ def page4():
         st.text("この上なく孤独、そして最も希少で戦略に長けている性格タイプ。")
 
         col1, col2, col3 = st.columns(3)
-        col1.metric("Temperature", "70 °F", "1.2 °F")
-        col2.metric("Wind", "9 mph", "-8%")
-        col3.metric("Humidity", "86%", "4%")        
+        col1.metric("知力", "120", "12%")
+        col2.metric("体力", "90", "-8%")
+        col3.metric("気力", "140", "4%")        
         
         submit_button = st.form_submit_button(label="確認", on_click=change_page)
 

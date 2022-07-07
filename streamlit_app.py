@@ -41,8 +41,9 @@ def page1():
 
     with st.form(key="name-form"):
         st.text("自分の考えに夢中になって、周囲のことを無視したり忘れることがよくある。")
-        st.form_submit_button(label="はい", on_click=change_page_yes)
-        st.form_submit_button(label="いいえ", on_click=change_page_no)
+        col1, col2 = st.columns(2)
+        col1.form_submit_button(label="はい", on_click=change_page_yes)
+        col2.form_submit_button(label="いいえ", on_click=change_page_no)
         
 def page2():
     set_bg_hack_url()

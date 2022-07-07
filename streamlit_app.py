@@ -90,10 +90,19 @@ def page4():
         st.session_state["page-select"] = "page1"
 
     with st.form(key='my_result'):
+        
+        with open('style.css') as f:
+            st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+        
         st.subheader("あなたの ilodoli タイプは建築家です。")
         st.image("https://kuku-keke.com/wp-content/uploads/2021/01/4537_6.png")
         st.text("この上なく孤独、そして最も希少で戦略に長けている性格タイプ。")
 
+        col1, col2, col3 = st.columns(3)
+        col1.metric("Temperature", "70 °F", "1.2 °F")
+        col2.metric("Wind", "9 mph", "-8%")
+        col3.metric("Humidity", "86%", "4%")        
+        
         submit_button = st.form_submit_button(label="確認", on_click=change_page)
 
 pages = dict(

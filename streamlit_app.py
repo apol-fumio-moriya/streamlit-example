@@ -35,7 +35,7 @@ def page1():
 
     st.text("自分の考えに夢中になって、周囲のことを無視したり忘れることがよくある。")
     #option = st_btn_select(('はい', 'いいえ'), index=0)
-    option = st_btn_select('YES', 'NO')
+    option = st_btn_select(('option1', 'option2', 'option3', 'option4'), index=2)
     if option == 'YES':
         st.session_state["page-select"] = "page2"
     elif option == 'NO':

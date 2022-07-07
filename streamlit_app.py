@@ -17,7 +17,7 @@ def set_bg_hack_url():
          f"""
          <style>
          .stApp {{
-             background: url("https://cdn.pixabay.com/photo/2020/06/19/22/33/wormhole-5319067_960_720.jpg");
+             background: url("https://files.slack.com/files-pri/T02G2LRSP1A-F03NLR2777C/image.png");
              background-size: cover
          }}
          </style>
@@ -27,9 +27,9 @@ def set_bg_hack_url():
 
 def page1():
     def change_page_yes():
-        st.session_state["page-select"] = "page2"
+        #st.session_state["page-select"] = "page2"
     def change_page_no():
-        st.session_state["page-select"] = "page3"
+        #st.session_state["page-select"] = "page3"
         
     set_bg_hack_url()
     st.write(
@@ -42,9 +42,9 @@ def page1():
     st.text("自分の考えに夢中になって、周囲のことを無視したり忘れることがよくある。")
     option = st_btn_select(('はい', 'いいえ'), index=0)
     if option == 'はい':
-        change_page_yes()
+        #change_page_yes()
     elif option == 'いいえ':
-        change_page_no()
+        #change_page_no()
         
 def page2():
     st.session_state["page-select"] = "page2"

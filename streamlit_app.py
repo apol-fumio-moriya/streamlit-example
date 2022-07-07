@@ -42,7 +42,7 @@ def page1():
     
 def page2():
     def change_page():
-        st.session_state["page-select"] = "page2"
+        st.session_state["page-select"] = "page1"
 
     with st.form(key='my_result'):
         st.subheader("あなたの ilodoli タイプは建築家です。")

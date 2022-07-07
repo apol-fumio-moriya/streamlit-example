@@ -26,7 +26,11 @@ def set_bg_hack_url():
      )
 
 def page1():
-    st.session_state["page-select"] = "page1"
+    def change_page_yes():
+        st.session_state["page-select"] = "page2"
+    def change_page_no():
+        st.session_state["page-select"] = "page3"
+        
     set_bg_hack_url()
     st.write(
         """
@@ -38,9 +42,9 @@ def page1():
     st.text("自分の考えに夢中になって、周囲のことを無視したり忘れることがよくある。")
     option = st_btn_select(('はい', 'いいえ'), index=0)
     if option == 'はい':
-        st.session_state["page-select"] = "page2"
+        change_page_yes()
     elif option == 'いいえ':
-        st.session_state["page-select"] = "page3"
+        change_page_no()
         
 def page2():
     st.session_state["page-select"] = "page2"

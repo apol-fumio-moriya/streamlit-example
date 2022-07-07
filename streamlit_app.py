@@ -42,24 +42,71 @@ def page1():
             options=["Yes", "No"],
             horizontal=True,
             )
+
+        submit_button = st.form_submit_button(label="診断", on_click=change_page)
+        
+def page2():
+    def change_page():
+        st.session_state["page-select"] = "page3"
+
+    set_bg_hack_url()
+    st.write(
+        """
+    # ilodoli タイプ診断
+    ilodoli にてあなたのタイプを診断してみませんか。
+    """
+    )
+
+    with st.form(key='my_form'):
         decide2 = st.radio(
             f"受信箱がごちゃごちゃするのが我慢できず、できるだけ早くEメールに返答しようとする。",
             options=["Yes", "No"],
             horizontal=True,
             )
+
+        submit_button = st.form_submit_button(label="診断", on_click=change_page)
+                                              
+def page3():
+    def change_page():
+        st.session_state["page-select"] = "page4"
+
+    set_bg_hack_url()
+    st.write(
+        """
+    # ilodoli タイプ診断
+    ilodoli にてあなたのタイプを診断してみませんか。
+    """
+    )
+
+    with st.form(key='my_form'):
         decide3 = st.radio(
             f"プレッシャーがあるときでも常にリラックスし、集中できる。",
             options=["Yes", "No"],
             horizontal=True,
             )
 
+        submit_button = st.form_submit_button(label="診断", on_click=change_page)
+                                              
+def page4():
+    def change_page():
+        st.session_state["page-select"] = "page5"
+
+    set_bg_hack_url()
+    st.write(
+        """
+    # ilodoli タイプ診断
+    ilodoli にてあなたのタイプを診断してみませんか。
+    """
+    )
+
+    with st.form(key='my_form'):
         st.text("通常、自分から話を始めることはない。")
         temp_options = ['はい', 'どちらでもない','いいえ']
         temp = st.select_slider("", options=temp_options)
 
         submit_button = st.form_submit_button(label="診断", on_click=change_page)
-    
-def page2():
+                                              
+def page5():
     def change_page():
         st.session_state["page-select"] = "page1"
 

@@ -7,8 +7,6 @@ st.set_page_config(
 import streamlit as st
 
 def page1():
-    st.title("What's your name?")
-
     def change_page():
         st.session_state["page-select"] = "page2"
 
@@ -43,13 +41,15 @@ def page1():
         submit_button = st.form_submit_button(label="診断", on_click=change_page)
     
 def page2():
-    st.title("Page2")
+    def change_page():
+        st.session_state["page-select"] = "page2"
+
     with st.form(key='my_result'):
         st.subheader("あなたの ilodoli タイプは建築家です。")
         st.image("https://kuku-keke.com/wp-content/uploads/2021/01/4537_6.png")
         st.text("この上なく孤独、そして最も希少で戦略に長けている性格タイプ。")
 
-        submit_button = st.form_submit_button(label="確認")
+        submit_button = st.form_submit_button(label="確認", on_click=change_page)
 
 
 pages = dict(

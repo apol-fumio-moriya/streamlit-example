@@ -54,7 +54,7 @@ def page2():
     )
 
     def change_page_yes():
-        st.session_state["page-select"] = "page4"
+        st.session_state["page-select"] = "page3"
     def change_page_no():
         st.session_state["page-select"] = "page1"
 
@@ -87,7 +87,7 @@ def page3():
     def change_page_yes():
         st.session_state["page-select"] = "page4"
     def change_page_no():
-        st.session_state["page-select"] = "page1"
+        st.session_state["page-select"] = "page2"
 
     st.markdown(
          f"""

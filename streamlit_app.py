@@ -59,6 +59,18 @@ def page2():
     def change_page_no():
         st.session_state["page-select"] = "page1"
 
+    st.markdown(
+         f"""
+         <style>
+         .stApp {{
+             background: url("https://www2.kek.jp/ilc/wp-content/uploads/2018/10/michinokaimei_img1.jpg");
+             background-size: cover
+         }}
+         </style>
+         """,
+         unsafe_allow_html=True
+     )
+
     with st.form(key="name-form"):
         st.text("受信箱がごちゃごちゃするのが我慢できず、できるだけ早くEメールに返答しようとする。")
         col1, col2 = st.columns(2)
@@ -78,6 +90,18 @@ def page3():
         st.session_state["page-select"] = "page4"
     def change_page_no():
         st.session_state["page-select"] = "page1"
+
+    st.markdown(
+         f"""
+         <style>
+         .stApp {{
+             background: url("https://www2.kek.jp/ilc/wp-content/uploads/2018/10/michinokaimei_img3.jpg");
+             background-size: cover
+         }}
+         </style>
+         """,
+         unsafe_allow_html=True
+     )
 
     with st.form(key="name-form"):
         st.text("プレッシャーがあるときでも常にリラックスし、集中できる。")

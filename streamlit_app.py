@@ -46,7 +46,6 @@ def page1():
         col2.form_submit_button(label="いいえ", on_click=change_page_no)
         
 def page2():
-    set_bg_hack_url()
     st.write(
         """
     # ilodoli タイプ診断
@@ -78,7 +77,6 @@ def page2():
         col2.form_submit_button(label="いいえ", on_click=change_page_no)
                                               
 def page3():
-    set_bg_hack_url()
     st.write(
         """
     # ilodoli タイプ診断

@@ -25,12 +25,7 @@ def set_bg_hack_url():
          unsafe_allow_html=True
      )
 
-def page1():
-    def change_page_yes():
-        #st.session_state["page-select"] = "page2"
-    def change_page_no():
-        #st.session_state["page-select"] = "page3"
-        
+def page1():        
     set_bg_hack_url()
     st.write(
         """

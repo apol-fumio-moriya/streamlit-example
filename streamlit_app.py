@@ -53,8 +53,8 @@ def page2():
 
 
 pages = dict(
-    page1="ページ1",
-    page2="ページ2",
+    page1="タイプ診断",
+    page2="診断結果",
 )
 
 page_id = st.sidebar.selectbox(

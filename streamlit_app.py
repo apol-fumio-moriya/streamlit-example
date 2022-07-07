@@ -1,4 +1,5 @@
 import streamlit as st
+from st_btn_select import st_btn_select
 
 st.set_page_config(
     page_title="ilodoli タイプ判断", page_icon="📊", initial_sidebar_state="expanded"

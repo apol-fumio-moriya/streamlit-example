@@ -26,6 +26,7 @@ def set_bg_hack_url():
      )
 
 def page1():
+    st.session_state["page-select"] = "page1"
     set_bg_hack_url()
     st.write(
         """
@@ -42,6 +43,7 @@ def page1():
         st.session_state["page-select"] = "page3"
         
 def page2():
+    st.session_state["page-select"] = "page2"
     set_bg_hack_url()
     st.write(
         """
@@ -58,6 +60,7 @@ def page2():
         st.session_state["page-select"] = "page1"
                                               
 def page3():
+    st.session_state["page-select"] = "page3"
     set_bg_hack_url()
     st.write(
         """
@@ -83,7 +86,6 @@ def page4():
         st.text("この上なく孤独、そして最も希少で戦略に長けている性格タイプ。")
 
         submit_button = st.form_submit_button(label="確認", on_click=change_page)
-
 
 pages = dict(
     page1="タイプ診断 1",

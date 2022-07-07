@@ -25,9 +25,6 @@ def set_bg_hack_url():
      )
 
 def page1():
-    def change_page():
-        st.session_state["page-select"] = "page2"
-
     set_bg_hack_url()
     st.write(
         """
@@ -36,19 +33,14 @@ def page1():
     """
     )
 
-    with st.form(key='my_form'):
-        decide1 = st.radio(
-            f"自分の考えに夢中になって、周囲のことを無視したり忘れることがよくある。",
-            options=["Yes", "No"],
-            horizontal=True,
-            )
-
-        submit_button = st.form_submit_button(label="診断", on_click=change_page)
+    st.text("自分の考えに夢中になって、周囲のことを無視したり忘れることがよくある。")
+    option = st_btn_select(('はい', 'いいえ'), index=2)
+    if option eq 'はい':
+        st.session_state["page-select"] = "page2"
+    elif option eq 'いいえ':
+        st.session_state["page-select"] = "page3"
         
 def page2():
-    def change_page():
-        st.session_state["page-select"] = "page3"
-
     set_bg_hack_url()
     st.write(
         """
@@ -57,19 +49,14 @@ def page2():
     """
     )
 
-    with st.form(key='my_form'):
-        decide2 = st.radio(
-            f"受信箱がごちゃごちゃするのが我慢できず、できるだけ早くEメールに返答しようとする。",
-            options=["Yes", "No"],
-            horizontal=True,
-            )
-
-        submit_button = st.form_submit_button(label="診断", on_click=change_page)
+    st.text("受信箱がごちゃごちゃするのが我慢できず、できるだけ早くEメールに返答しようとする。")
+    option = st_btn_select(('はい', 'いいえ'), index=2)
+    if option eq 'はい':
+        st.session_state["page-select"] = "page4"
+    elif option eq 'いいえ':
+        st.session_state["page-select"] = "page1"
                                               
 def page3():
-    def change_page():
-        st.session_state["page-select"] = "page4"
-
     set_bg_hack_url()
     st.write(
         """
@@ -78,14 +65,12 @@ def page3():
     """
     )
 
-    with st.form(key='my_form'):
-        decide3 = st.radio(
-            f"プレッシャーがあるときでも常にリラックスし、集中できる。",
-            options=["Yes", "No"],
-            horizontal=True,
-            )
-
-        submit_button = st.form_submit_button(label="診断", on_click=change_page)
+    st.text("プレッシャーがあるときでも常にリラックスし、集中できる。")
+    option = st_btn_select(('はい', 'いいえ'), index=2)
+    if option eq 'はい':
+        st.session_state["page-select"] = "page4"
+    elif option eq 'いいえ':
+        st.session_state["page-select"] = "page1"
                                               
 def page4():
     def change_page():

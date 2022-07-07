@@ -54,12 +54,15 @@ def page2():
     """
     )
 
-    st.text("受信箱がごちゃごちゃするのが我慢できず、できるだけ早くEメールに返答しようとする。")
-    option = st_btn_select(('はい', 'いいえ'), index=0)
-    if option == 'はい':
+    def change_page_yes():
         st.session_state["page-select"] = "page4"
-    elif option == 'いいえ':
+    def change_page_no():
         st.session_state["page-select"] = "page1"
+
+    with st.form(key="name-form"):
+        st.text("受信箱がごちゃごちゃするのが我慢できず、できるだけ早くEメールに返答しようとする。")
+        st.form_submit_button(label="はい", on_click=change_page_yes)
+        st.form_submit_button(label="いいえ", on_click=change_page_no)
                                               
 def page3():
     st.session_state["page-select"] = "page3"
@@ -71,12 +74,15 @@ def page3():
     """
     )
 
-    st.text("プレッシャーがあるときでも常にリラックスし、集中できる。")
-    option = st_btn_select(('はい', 'いいえ'), index=0)
-    if option == 'はい':
+    def change_page_yes():
         st.session_state["page-select"] = "page4"
-    elif option == 'いいえ':
+    def change_page_no():
         st.session_state["page-select"] = "page1"
+
+    with st.form(key="name-form"):
+        st.text("プレッシャーがあるときでも常にリラックスし、集中できる。")
+        st.form_submit_button(label="はい", on_click=change_page_yes)
+        st.form_submit_button(label="いいえ", on_click=change_page_no)
                                               
 def page4():
     def change_page():

@@ -61,8 +61,9 @@ def page2():
 
     with st.form(key="name-form"):
         st.text("受信箱がごちゃごちゃするのが我慢できず、できるだけ早くEメールに返答しようとする。")
-        st.form_submit_button(label="はい", on_click=change_page_yes)
-        st.form_submit_button(label="いいえ", on_click=change_page_no)
+        col1, col2 = st.columns(2)
+        col1.form_submit_button(label="はい", on_click=change_page_yes)
+        col2.form_submit_button(label="いいえ", on_click=change_page_no)
                                               
 def page3():
     set_bg_hack_url()
@@ -80,8 +81,9 @@ def page3():
 
     with st.form(key="name-form"):
         st.text("プレッシャーがあるときでも常にリラックスし、集中できる。")
-        st.form_submit_button(label="はい", on_click=change_page_yes)
-        st.form_submit_button(label="いいえ", on_click=change_page_no)
+        col1, col2 = st.columns(2)
+        col1.form_submit_button(label="はい", on_click=change_page_yes)
+        col2.form_submit_button(label="いいえ", on_click=change_page_no)
                                               
 def page4():
     def change_page():

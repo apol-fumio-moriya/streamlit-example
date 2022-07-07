@@ -89,6 +89,18 @@ def page4():
     def change_page():
         st.session_state["page-select"] = "page1"
 
+    st.markdown(
+        f"""
+        <style>
+        .stApp {{
+            background: url("https://assets.media-platform.com/lifehacker/dist/images/2021/03/16/210317brain_top-w1280.jpg");
+            background-size: cover
+        }}
+        </style>
+        """,
+        unsafe_allow_html=True
+     )
+
     with st.form(key='my_result'):
         
         with open('style.css') as f:

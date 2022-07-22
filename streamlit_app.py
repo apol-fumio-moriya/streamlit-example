@@ -27,6 +27,9 @@ def set_bg_hack_url():
      )
 
 def page1(): 
+    with open('style.css') as f:
+        st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+        
     stc.html("""
                 <div class="dot"></div>
                 <div class="-\33 94"></div>

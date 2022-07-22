@@ -27,46 +27,47 @@ def set_bg_hack_url():
      )
 
 def page1(): 
-    with open('style.css') as f:
-        st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
-        
-    stc.html("""
-                <div class="dot"></div>
-                <div class="-\33 94"></div>
-                <div class="-\34 12"></div>
-                <div class="-\33 90"></div>
-                <div class="-\33 96"></div>
-                <div class="-\33 98"></div>
-                <div class="-\33 91"></div>
-                <div class="-\34 11"></div>
-                <div class="-\33 95"></div>
-                <div class="-\33 92"></div>
-                <div class="-\34 10"></div>
-                <div class="-\33 93"></div>
-                <div class="-\33 99"></div>
-                <div class="-\33 97"></div>
-                <span class="\-">
-  エンゲージメント解析サービス
-イロドリ
-</span>
-                <div class="ilodloli_logo_220708_fix"></div>
-                <span class="\-">
-  あなたの
-“働くマインド”は何タイプ？
-</span>
-                <div class="-\36 63"></div>
-                <span>
-  診断スタート
-</span>
-                <span class="Powerd-by">
-  Powerd by
-</span>
-                <div class="Rectangle-25"></div>
-                <span class="APOLLO-Inc">
-  ©APOLLO, Inc.
-</span>
-             """
-            )
+    with st.form(key='my_result'):
+        with open('style.css') as f:
+            st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+
+        stc.html("""
+                    <div class="dot"></div>
+                    <div class="-\33 94"></div>
+                    <div class="-\34 12"></div>
+                    <div class="-\33 90"></div>
+                    <div class="-\33 96"></div>
+                    <div class="-\33 98"></div>
+                    <div class="-\33 91"></div>
+                    <div class="-\34 11"></div>
+                    <div class="-\33 95"></div>
+                    <div class="-\33 92"></div>
+                    <div class="-\34 10"></div>
+                    <div class="-\33 93"></div>
+                    <div class="-\33 99"></div>
+                    <div class="-\33 97"></div>
+                    <span class="\-">
+      エンゲージメント解析サービス
+    イロドリ
+    </span>
+                    <div class="ilodloli_logo_220708_fix"></div>
+                    <span class="\-">
+      あなたの
+    “働くマインド”は何タイプ？
+    </span>
+                    <div class="-\36 63"></div>
+                    <span>
+      診断スタート
+    </span>
+                    <span class="Powerd-by">
+      Powerd by
+    </span>
+                    <div class="Rectangle-25"></div>
+                    <span class="APOLLO-Inc">
+      ©APOLLO, Inc.
+    </span>
+                 """
+                )
         
 def page2():
     st.write(

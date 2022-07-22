@@ -1,4 +1,5 @@
 import streamlit as st
+import streamlit.components.v1 as stc
 from st_btn_select import st_btn_select
 
 st.set_page_config(
@@ -25,25 +26,44 @@ def set_bg_hack_url():
          unsafe_allow_html=True
      )
 
-def page1():        
-    set_bg_hack_url()
-    st.write(
-        """
-    # ilodoli タイプ診断
-    ilodoli にてあなたのタイプを診断してみませんか。
-    """
-    )
-    
-    def change_page_yes():
-        st.session_state["page-select"] = "page2"
-    def change_page_no():
-        st.session_state["page-select"] = "page3"
-
-    with st.form(key="name-form"):
-        st.text("自分の考えに夢中になって、周囲のことを無視したり忘れることがよくある。")
-        col1, col2 = st.columns(2)
-        col1.form_submit_button(label="はい", on_click=change_page_yes)
-        col2.form_submit_button(label="いいえ", on_click=change_page_no)
+def page1(): 
+    stc.html("""
+                <div class="dot"></div>
+                <div class="-\33 94"></div>
+                <div class="-\34 12"></div>
+                <div class="-\33 90"></div>
+                <div class="-\33 96"></div>
+                <div class="-\33 98"></div>
+                <div class="-\33 91"></div>
+                <div class="-\34 11"></div>
+                <div class="-\33 95"></div>
+                <div class="-\33 92"></div>
+                <div class="-\34 10"></div>
+                <div class="-\33 93"></div>
+                <div class="-\33 99"></div>
+                <div class="-\33 97"></div>
+                <span class="\-">
+  エンゲージメント解析サービス
+イロドリ
+</span>
+                <div class="ilodloli_logo_220708_fix"></div>
+                <span class="\-">
+  あなたの
+“働くマインド”は何タイプ？
+</span>
+                <div class="-\36 63"></div>
+                <span>
+  診断スタート
+</span>
+                <span class="Powerd-by">
+  Powerd by
+</span>
+                <div class="Rectangle-25"></div>
+                <span class="APOLLO-Inc">
+  ©APOLLO, Inc.
+</span>
+             """
+            )
         
 def page2():
     st.write(
